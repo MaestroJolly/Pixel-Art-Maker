@@ -4,7 +4,7 @@
 
 * [Instructions](#instructions)
 * [Contributing](#contributing)
-* [Url To Access App](#url-to-access-app)
+* [Link To Access App](#link)
 
 ## Instructions
 
@@ -16,6 +16,6 @@ For specific, detailed instructions, look at the project instructions in the [Ud
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
-## Url To Access Site
+## Link To Access App
 
 Click Here To Visit App Page : https://maestrojolly.github.io/Pixel-Art-Maker/

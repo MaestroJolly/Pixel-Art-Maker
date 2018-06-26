@@ -1,6 +1,4 @@
-# Udacity-Pixel-Art-Maker
-
-A single-page web app that allows users to draw pixel art on a customizable canvas coded in Javascript and jQuery
+# Pixel Art Maker Project
 
 ## Table of Contents
 

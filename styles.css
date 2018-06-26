@@ -1,5 +1,14 @@
+/* Author: MaestroJolly */
+/* CSS Declaration ruleset to style various elements on our page */
+
 body {
     text-align: center;
+    color: #ffffff;
+    background: rgb(255,1,192);
+    background: -moz-linear-gradient(56deg, rgba(255,1,192,1) 0%, rgba(125,5,154,1) 49%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%);
+    background: -webkit-linear-gradient(56deg, rgba(255,1,192,1) 0%, rgba(125,5,154,1) 49%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(56deg, rgba(255,1,192,1) 0%, rgba(125,5,154,1) 49%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff01c0",endColorstr="#00d4ff",GradientType=1);
 }
 
 h1 {
@@ -37,4 +46,56 @@ td {
 
 input[type=number] {
     width: 6em;
+    height: 2em;
+    border-radius: 4px;
+    border: none;
+}
+
+/* CSS Declaration rule to change our color picker cursor on hover */
+
+#colorPicker{
+  cursor: pointer;
+}
+
+/* CSS Declaration rule to style our Make Grid Button */
+
+.gridButton{
+  height: 2em;
+  border-radius: 4px;
+  border: 3px;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 17px 70px -6px rgba(0,0,0,0.64);
+  -moz-box-shadow: 10px 17px 70px -6px rgba(0,0,0,0.64);
+  box-shadow: 10px 17px 70px -6px rgba(0,0,0,0.64);
+}
+/* CSS Declaration rule to add hover style  to our Make Grid Button */
+
+.gridButton:hover{
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* CSS Declaration rule to style our reset Button */
+
+.resetButton{
+  height: 2em;
+  border-radius: 4px;
+  font-weight: bold;
+  border: 3px;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 17px 70px -6px rgba(0,0,0,0.64);
+  -moz-box-shadow: 10px 17px 70px -6px rgba(0,0,0,0.64);
+  box-shadow: 10px 17px 70px -6px rgba(0,0,0,0.64);
+}
+
+/* CSS Declaration rule to add hover style for our reset Button */
+
+.resetButton:hover{
+  background-color: #ffffff;
+  color: #000000;
 }

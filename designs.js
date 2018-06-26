@@ -4,33 +4,59 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
-var inputColor, inputHeight, inputWeight, pixelCanvas, sizePicker;
+
+// Various selectors assigned to variables
+let inputColor, inputHeight, inputWeight, pixelCanvas, sizePicker, resetButton;
 inputColor = $( "#colorPicker" );
 pixelCanvas = $( "#pixelCanvas" );
+resetButton = $( "input:reset" );
 
+
+//function to build the grid
 
 function makeGrid() {
   inputHeight = $( "#inputHeight" ).val();
   inputWeight = $( "#inputWeight" ).val();
   pixelCanvas.children().remove();
-  for ( var row = 0; row < inputHeight; row++ ){
+  for ( let row = 0; row < inputHeight; row++ ){
     pixelCanvas.append( "<tr></tr>" );
   }
-  gridRows = $( "tr" );
-  for ( var column = 0; column < inputWeight; column++ ){
+  let gridRows = $( "tr" );
+  for ( let column = 0; column < inputWeight; column++ ){
       gridRows.append( "<td></td>" );
   }
 
-  cell = pixelCanvas.find( "td" );
+ let cell = pixelCanvas.find( "td" );
+
+
+/* event listener to paint our canvas with selected color
+and also remove a painted cell in case of mistake.
+*/
 
   cell.click( function () {
-      var colorValue = $( "#colorPicker" ).val();
-      $( this ).css("background-color", colorValue);
+
+      let colorValue = $( "#colorPicker" ).val();
+
+      if ( $( this ).attr("bgcolor") ){
+        $( this ).removeAttr("bgcolor");
+      }else{
+        $( this ).attr("bgcolor", colorValue);
+      }
   });
 
 }
 
+/*event listener to graw our canvas based of number of rows and
+columns inputs.
+*/
+
 $( "#sizePicker" ).submit( function( event ) {
   event.preventDefault();
   makeGrid();
+});
+
+// Event listener to set our canvas layout to new or prevent
+
+resetButton.click( function () {
+  pixelCanvas.children().remove();
 });
